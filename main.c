@@ -27,6 +27,20 @@ char* RockPaperScissor(char player1[], char player2[]) {
 		return "Invalid";
 	}
 
+	if (strcmp(player1, player2) == 0) { //checks to see for draw conditions
+		return "Draw";
+	}
+
+
+	// Checks all valid possibilites for a game
+	if ((strcmp(player1, "Rock") == 0 && strcmp(player2, "Scissor") == 0) ||
+		(strcmp(player1, "Paper") == 0 && strcmp(player2, "Rock") == 0) ||
+		(strcmp(player1, "Scissor") == 0 && strcmp(player2, "Paper") == 0)) {
+		return "Player1";
+	}
+
+	return "Player2";
+
 
 }
 
